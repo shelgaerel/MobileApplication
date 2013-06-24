@@ -1,0 +1,33 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="CoreFactory" expanded="True" />
+          <Node name="CoreLibrary" expanded="True">
+            <Node name="AbstractDataEntityManager" expanded="True" />
+            <Node name="Attribute" expanded="True" />
+            <Node name="DataBinding" expanded="True" />
+            <Node name="DataEntityBase" expanded="True" />
+            <Node name="Enum" expanded="True" />
+            <Node name="SQLite" expanded="True" />
+            <Node name="Utility" expanded="True" />
+          </Node>
+          <Node name="DataEntity" expanded="True" />
+          <Node name="DataEntityManager" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/matteonavanzino/Projects/ProgettoPilota-iOs/DataListDataSource-iOs/DataListDataSource/AreeDataListSource.cs" line="39" column="51" />
+      <Breakpoint file="/Users/matteonavanzino/Projects/ProgettoPilota-iOs/ProgettoPilota-iOs-StoryBoard/MenuTableCell/MenuTableCell.cs" line="15" column="38" />
+      <Breakpoint file="/Users/matteonavanzino/Projects/ProgettoPilota-iOs/ProgettoPilota-iOs-StoryBoard/MenuTableCell/MenuTableCell.cs" line="26" column="43" />
+      <Breakpoint file="/Users/matteonavanzino/Projects/ProgettoPilota-iOs/ProgettoPilota-iOs-StoryBoard/TestTable.cs" line="18" column="25" />
+      <Breakpoint file="/Users/matteonavanzino/Projects/ProgettoPilota-iOs/ProgettoPilota-iOs-StoryBoard/DataListDataSource/AreeDataListSource.cs" line="49" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
