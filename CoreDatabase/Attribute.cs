@@ -11,6 +11,20 @@ namespace CoreLibrary
 		}
 	}
 
+	#region Attributi Entity Fabrizio-Android
+
+	[AttributeUsage(AttributeTargets.Property)]
+	public class FieldName : Attribute
+	{
+		public string Name;
+		public FieldName(string name)
+		{
+			this.Name = name;
+		}
+	}
+
+	#endregion
+
 	#region Attributi Entity
 
 	public class EntityColumnName: Attribute

@@ -7,15 +7,15 @@ using System.Globalization;
 
 namespace CoreLibrary
 {
-	public class DataEntityBase
+	public class Data
 	{
 		[IgnoreAttribute]
-		public DataEntityState State {get;set;}
+		public DataState State {get;set;}
 
 		[PrimaryKey, AutoIncrement]
 		public int ID { get; set; }
 
-		public DataEntityBase()
+		public Data()
 		{
 
 		}
@@ -39,6 +39,17 @@ namespace CoreLibrary
 
 			return (T)val;
 		}
+
+		#region Fabrizio-Android
+
+		private List<DataBinding> mDataBindingList;
+		public List<DataBinding> DataBindingList 
+		{
+			get { return mDataBindingList; }
+			set { mDataBindingList = value; }
+		}
+
+		#endregion
 	}
 }
 

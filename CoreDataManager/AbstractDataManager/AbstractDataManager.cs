@@ -1,11 +1,13 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CoreLibrary
 {
-	public abstract class AbstractDataEntityManager
+	public abstract class AbstractDataManager
 	{
-		private DataEntityBase mDataEntity;
-		public DataEntityBase DataEntity
+		private Data mDataEntity;
+		public Data DataEntity
 		{
 			get
 			{
@@ -39,13 +41,13 @@ namespace CoreLibrary
 		{
 			//Inserimento della logica di scrittura
 			switch (this.mDataEntity.State) {
-				case DataEntityState.Added:
+				case DataState.Added:
 				DataBase.Insert (this.mDataEntity);
 				break;
-				case DataEntityState.Modified:
+				case DataState.Modified:
 				DataBase.Update (this.mDataEntity);
 				break;
-				case DataEntityState.Deleted:
+				case DataState.Deleted:
 				DataBase.Delete (this.mDataEntity);
 				break;
 				default:
@@ -53,13 +55,13 @@ namespace CoreLibrary
 			}
 		}
 
-		public abstract DataEntityBase Read ();
+		public abstract Data Read ();
 
 		public virtual void Read<T> (object primaryKey)
-			where T : DataEntityBase, new()
+			where T : Data, new()
 		{
 			this.DataEntity = this.DataBase.Get<T> (primaryKey);
-			this.DataEntity.State = DataEntityState.Modified;
+			this.DataEntity.State = DataState.Modified;
 		}
 
 		public virtual bool CheckEntity()
@@ -76,7 +78,7 @@ namespace CoreLibrary
 			}
 		}
 
-		public virtual List<T> GetEntityList<T> () where T : DataEntityBase, new()
+		public virtual List<T> GetEntityList<T> () where T : Data, new()
 		{
 			CreateTableIfNotExist<T> ();
 			return (from i in  this.DataBase.Table<T> () select i).ToList();
