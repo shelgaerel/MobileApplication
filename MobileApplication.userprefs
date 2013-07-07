@@ -1,19 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CoreDataManager/AbstractDataManager/AbstractDataManager.cs">
+    <Files>
+      <File FileName="CoreDatabase/DataBase/AbstractDataBase.cs" Line="3" Column="23" />
+      <File FileName="CoreDatabase/DataBase/SQLite.cs" Line="35" Column="19" />
+      <File FileName="CoreDatabase/DataBaseFactory.cs" Line="4" Column="23" />
+      <File FileName="CoreDataManager/AbstractDataManager/AbstractDataManager.cs" Line="3" Column="19" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CoreFactory" expanded="True" />
-          <Node name="CoreLibrary" expanded="True">
-            <Node name="AbstractDataEntityManager" expanded="True" />
-            <Node name="Attribute" expanded="True" />
-            <Node name="DataBinding" expanded="True" />
-            <Node name="DataEntityBase" expanded="True" />
-            <Node name="Enum" expanded="True" />
-            <Node name="SQLite" expanded="True" />
-            <Node name="Utility" expanded="True" />
+          <Node name="CoreDatabase" expanded="True">
+            <Node name="DataBase" expanded="True" />
           </Node>
+          <Node name="CoreDataManager" expanded="True">
+            <Node name="AbstractDataManager" expanded="True">
+              <Node name="AbstractDataManager.cs" selected="True" />
+            </Node>
+            <Node name="Data" expanded="True" />
+          </Node>
+          <Node name="CoreFactory" expanded="True" />
+          <Node name="CoreLibrary" expanded="True" />
           <Node name="DataEntity" expanded="True" />
           <Node name="DataEntityManager" expanded="True" />
         </State>

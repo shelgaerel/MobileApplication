@@ -27,4 +27,20 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Tabelle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tabelle\AreeDataManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreLibrary\CoreLibrary.csproj">
+      <Project>{2C76C137-DC34-41DE-AAE8-6D036A5B95F0}</Project>
+      <Name>CoreLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataEntity\DataEntity.csproj">
+      <Project>{519E1057-7562-4BA6-B720-56D2A483B631}</Project>
+      <Name>DataEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
