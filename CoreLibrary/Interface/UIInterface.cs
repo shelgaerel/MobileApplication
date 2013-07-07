@@ -2,11 +2,11 @@ using System;
 
 namespace CoreLibrary
 {
-	public class UIInterface
+	public interface UIInterface
 	{
-		public UIInterface ()
-		{
-		}
+		void LoadDataEntity(object pkValue);
+		AbstractDataManager CreateDataEntityManager();
+		void GetDataEntityFromControls();
 	}
 }
 

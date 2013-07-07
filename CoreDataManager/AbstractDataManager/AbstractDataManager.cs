@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CoreLibrary
+namespace CoreDataManager
 {
 	public abstract class AbstractDataManager
 	{
@@ -19,36 +19,18 @@ namespace CoreLibrary
 			}
 		}
 
-		private SQLiteConnection mDataBase;
-		protected SQLiteConnection DataBase
-		{
-			get
-			{
-				if (mDataBase == null) 
-				{
-					this.mDataBase = new SQLiteConnection (MobileOptions.GetDataBaseFilePath());
-				}
-				return mDataBase;
-
-			}
-			set
-			{
-				mDataBase = value;
-			}
-		}
-
 		public virtual void UpdateEntity()
 		{
 			//Inserimento della logica di scrittura
 			switch (this.mDataEntity.State) {
 				case DataState.Added:
-				DataBase.Insert (this.mDataEntity);
+				DataBaseFactory.GetDataBaseConnection().Insert (this.mDataEntity);
 				break;
 				case DataState.Modified:
-				DataBase.Update (this.mDataEntity);
+				DataBaseFactory.GetDataBaseConnection().Update (this.mDataEntity);
 				break;
 				case DataState.Deleted:
-				DataBase.Delete (this.mDataEntity);
+				DataBaseFactory.GetDataBaseConnection().Delete (this.mDataEntity);
 				break;
 				default:
 				break;
@@ -60,7 +42,7 @@ namespace CoreLibrary
 		public virtual void Read<T> (object primaryKey)
 			where T : Data, new()
 		{
-			this.DataEntity = this.DataBase.Get<T> (primaryKey);
+			this.DataEntity = DataBaseFactory.GetDataBaseConnection().Get<T> (primaryKey);
 			this.DataEntity.State = DataState.Modified;
 		}
 
@@ -72,7 +54,7 @@ namespace CoreLibrary
 
 		protected virtual void CreateTableIfNotExist<T>()
 		{
-			using (var conn= new SQLiteConnection(MobileOptions.GetDataBaseFilePath()))
+			using (var conn= DataBaseFactory.GetDataBaseConnection())
 			{
 				conn.CreateTable<T>();
 			}
@@ -81,7 +63,7 @@ namespace CoreLibrary
 		public virtual List<T> GetEntityList<T> () where T : Data, new()
 		{
 			CreateTableIfNotExist<T> ();
-			return (from i in  this.DataBase.Table<T> () select i).ToList();
+			return (from i in  DataBaseFactory.GetDataBaseConnection().Table<T> () select i).ToList();
 		}
 	}
 }

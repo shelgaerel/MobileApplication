@@ -1,6 +1,6 @@
 using System;
 
-namespace CoreLibrary
+namespace CoreDataManager
 {
 	public class EntityBindingProperty : Attribute
 	{

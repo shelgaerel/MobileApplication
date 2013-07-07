@@ -6,7 +6,7 @@ using System.IO;
 
 namespace CoreFactory
 {
-	public static class DataEntityManagerFactory
+	public static class DataManagerFactory
 	{
 		public static AbstractDataManager CreateEngine(string dataEntityManagerQualifiedName, 
 		                                                     string dataEntityQualifiedName)

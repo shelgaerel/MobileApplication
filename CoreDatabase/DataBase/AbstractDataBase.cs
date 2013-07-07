@@ -1,6 +1,6 @@
 using System;
 
-namespace CoreLibrary
+namespace CoreDatabase
 {
 	public abstract class AbstractDataBase
 	{

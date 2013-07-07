@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace CoreLibrary
+namespace CoreDatabase
 {
 	public static class MobileOptions
 	{

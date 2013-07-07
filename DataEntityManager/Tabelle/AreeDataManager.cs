@@ -4,9 +4,9 @@ using DataEntity;
 
 namespace DataEntityManager
 {
-	public class AreeDataEntityManager : AbstractDataManager
+	public class AreeDataManager : AbstractDataManager
 	{
-		public AreeDataEntityManager ()
+		public AreeDataManager ()
 		{
 
 		}

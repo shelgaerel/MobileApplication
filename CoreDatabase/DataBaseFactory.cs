@@ -1,7 +1,7 @@
 using System;
 using CoreLibrary;
 
-namespace CoreFactory
+namespace CoreDatabase
 {
 	public static class DataBaseFactory
 	{

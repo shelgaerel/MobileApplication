@@ -27,4 +27,21 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="DataBase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase\AbstractDataBase.cs" />
+    <Compile Include="Attribute.cs" />
+    <Compile Include="MobileOptions.cs" />
+    <Compile Include="DataBase\SQLite.cs" />
+    <Compile Include="DataBaseFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
 </Project>

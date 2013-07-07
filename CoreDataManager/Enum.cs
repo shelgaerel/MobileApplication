@@ -2,11 +2,12 @@ using System;
 
 namespace CoreDataManager
 {
-	public class Enum
+	public enum DataState
 	{
-		public Enum ()
-		{
-		}
+		UnChanged = 0,
+		Modified = 1,
+		Added = 2,
+		Deleted = 3
 	}
 }
 

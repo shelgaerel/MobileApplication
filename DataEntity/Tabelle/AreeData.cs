@@ -3,14 +3,14 @@ using CoreLibrary;
 
 namespace DataEntity
 {
-	public class AreeDataEntity : Data
+	public class AreeData : Data
 	{
-		public AreeDataEntity ()
+		public AreeData ()
 		{
 			State = DataState.UnChanged;
 		}
 
-		public AreeDataEntity(DataState state)
+		public AreeData(DataState state)
 		{
 			State = state;
 		}
